@@ -1,0 +1,8 @@
+Key,Value,Note
+emailName,,email name that the robot will use
+emailPassword,,email password
+hidemeUsername,,username of hide.me account to signup or login
+hidemePassword,,password of hide.me account
+outputFolder,Data\Output,the output folder thatt contains the process result files
+screenshotsFolder,Data\Output\screenshots,this folder contains the error screenshots
+receiverEmails,,receiver's emails that you should send the output files to them
