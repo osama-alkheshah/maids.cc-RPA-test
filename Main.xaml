@@ -87,7 +87,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="914,747" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="844,747" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dic_ConfigCSV" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_mailstatus" />
@@ -97,22 +97,22 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">40,2.5</av:Point>
+        <av:Point x:Key="ShapeLocation">170,0</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">70,77.5 70,107.5 100,107.5 100,122</av:PointCollection>
-        <x:Double x:Key="Width">880</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">200,75 200,125</av:PointCollection>
+        <x:Double x:Key="Width">810</x:Double>
         <x:Double x:Key="Height">710.04</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID6">
+    <FlowStep x:Name="__ReferenceID7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">0,122</av:Point>
+          <av:Point x:Key="ShapeLocation">100,125</av:Point>
           <av:Size x:Key="ShapeSize">200,56</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">100,178 100,208 300,208 300,217.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">200,181 200,231</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Read Config.csv" DisplayName="Workflows\Reading_Config.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Reading_Config.xaml">
@@ -130,7 +130,7 @@
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">200,217.5</av:Point>
+              <av:Point x:Key="ShapeLocation">100,231</av:Point>
               <av:Size x:Key="ShapeSize">200,25</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -149,49 +149,40 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID1">
+    <x:Reference>__ReferenceID0</x:Reference>
+    <FlowStep x:Name="__ReferenceID5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">430,56.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,67</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">530,56.5 530,37.50000000000003 400,37.50000000000003 400,187.50000000000003 430,187.50000000000003 430,230 400,230</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">90,307.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,25</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">190,332.5 190,397.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Delay sap2010:Annotation.AnnotationText="Wait until receive the test email" Duration="00:05:00" sap:VirtualizedContainerService.HintSize="200,67" sap2010:WorkflowViewState.IdRef="Delay_1">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\OpenChromeAndHidemeWebsite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\OpenChromeAndHidemeWebsite.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        </ui:InvokeWorkflowFile.Arguments>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </Delay>
+      </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <x:Reference>__ReferenceID0</x:Reference>
-    <FlowDecision Condition="[bool_mailstatus]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">720.5,156.5</av:Point>
-          <av:Size x:Key="ShapeSize">79,87</av:Size>
-          <av:PointCollection x:Key="FalseConnector">799.5,200 829.5,200 829.5,90 630,90</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">720.5,200 690.5,200 690.5,260 660,260</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <FlowDecision.True>
-        <FlowStep x:Name="__ReferenceID2">
+        <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">460,247.5</av:Point>
+              <av:Point x:Key="ShapeLocation">90,397.5</av:Point>
               <av:Size x:Key="ShapeSize">200,25</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">460,260 430,260 430,297.5 720,297.5 720,327.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">190,422.5 190,477.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\OpenChromeAndHidemeWebsite.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\OpenChromeAndHidemeWebsite.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\SignupAccountHideme.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\SignupAccountHideme.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <scg:Dictionary x:TypeArguments="x:String, Argument" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_emailname">[dic_ConfigCSV("emailName").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_emailpassword">[dic_ConfigCSV("emailPassword").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_hidemeusername">[dic_ConfigCSV("hidemeUsername").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_str_hidemepassword">[dic_ConfigCSV("hidemePassword").ToString]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -200,20 +191,17 @@
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID3">
+            <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">620,327.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">90,477.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,25</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">720,352.5 720,402.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">190,502.5 190,547.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\SignupAccountHideme.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\SignupAccountHideme.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\OpenHidemeVPN.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\OpenHidemeVPN.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_str_emailname">[dic_ConfigCSV("emailName").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_str_emailpassword">[dic_ConfigCSV("emailPassword").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_str_hidemeusername">[dic_ConfigCSV("hidemeUsername").ToString]</InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_str_hidemepassword">[dic_ConfigCSV("hidemePassword").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_str_HidemeVPNFileLocation">[str_HidemeVPNFileLocation]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -222,17 +210,17 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID4">
+                <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">620,402.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">90,547.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,25</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">720,427.5 720,477.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">190,572.5 190,637.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\OpenHidemeVPN.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\OpenHidemeVPN.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\ReadExcelAndGenerateFakeData.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\ReadExcelAndGenerateFakeData.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_str_HidemeVPNFileLocation">[str_HidemeVPNFileLocation]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_str_ScreenshotsFolder">[dic_ConfigCSV("screenshotsFolder").ToString]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -241,17 +229,23 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID5">
+                    <FlowStep x:Name="__ReferenceID4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">620,477.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">90,637.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,25</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\ReadExcelAndGenerateFakeData.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\ReadExcelAndGenerateFakeData.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\SendResultAndSummary.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Workflows\SendResultAndSummary.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ScreenshotsFolder">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_ConfigCSV(&quot;screenshotsFolder&quot;).ToString" />
+                          <InArgument x:TypeArguments="x:String" x:Key="in_str_ReceiverEmail">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_ConfigCSV(&quot;receiverEmails&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_str_emailName">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_ConfigCSV(&quot;emailName&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="in_str_emailPassword">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dic_ConfigCSV(&quot;emailPassword&quot;).ToString" />
                           </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
@@ -267,14 +261,40 @@
             </FlowStep>
           </FlowStep.Next>
         </FlowStep>
-      </FlowDecision.True>
-      <FlowDecision.False>
-        <x:Reference>__ReferenceID1</x:Reference>
-      </FlowDecision.False>
-    </FlowDecision>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <x:Reference>__ReferenceID5</x:Reference>
+    <FlowDecision DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+      <FlowDecision.Condition>
+        <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="bool_mailstatus" />
+      </FlowDecision.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">420.5,46.5</av:Point>
+          <av:Size x:Key="ShapeSize">79,87</av:Size>
+          <av:PointCollection x:Key="TrueConnector">420.5,90 390.5,90 390.5,277.5 190,277.5 190,307.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">499.5,90 680,90 680,147.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <FlowDecision.True>
+        <x:Reference>__ReferenceID5</x:Reference>
+      </FlowDecision.True>
+      <FlowDecision.False>
+        <FlowStep x:Name="__ReferenceID6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">580,147.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,25</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message - End Process" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No Mails&quot;]" />
+        </FlowStep>
+      </FlowDecision.False>
+    </FlowDecision>
+    <x:Reference>__ReferenceID6</x:Reference>
   </Flowchart>
 </Activity>
