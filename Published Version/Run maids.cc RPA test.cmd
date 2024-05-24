@@ -1,0 +1,1 @@
+start "" "C:\Users\IT\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" "C:\Users\IT\Documents\UiPath\maids.cc RPA test\Published Version\maids.cc.RPA.test.1.0.1.nupkg"
